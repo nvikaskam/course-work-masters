@@ -1,2 +1,2 @@
-# course-work-masters
+# Statistical Learning
 This repo contains scripts from one of my favorite classes around statistical learning during my masters degree at UT Austin
