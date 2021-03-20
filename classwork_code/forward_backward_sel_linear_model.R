@@ -1,10 +1,3 @@
----
-title: "R Notebook"
-output: html_notebook
----
-
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
-```{r}
 ### In this part we will do:
 ### (1) All subset selections with no interaction
 ### (2) Forward selection with two way interactions
@@ -46,10 +39,7 @@ names(summary.all.subsets.models)
 
 bic.all.subsets.models = summary.all.subsets.models$bic
 bic.all.subsets.models 
-```
 
-
-```{r}
 ###
 ### Plot the BIC values versus the number of predictors to see the "best" model:
 ###
@@ -57,11 +47,6 @@ bic.all.subsets.models
 predictors = 1:11
 plot(bic.all.subsets.models ~ predictors, ylab="BIC", xlab="Number of Predictors", type="b", pch=19)
 abline(v = 8, lty = 2, col = "red")
-```
-
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
-
-```{r}
 
 ### Note something interesting: BIC keeps on decreasing but after some point it starts going up; models with 
 ### more predictors start to perform worse.
@@ -147,11 +132,3 @@ head(mse)
 sqrt(apply(mse, MARGIN = 2, FUN = mean))
  
 ############################################################################
-```
-
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
-
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
-
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
-
